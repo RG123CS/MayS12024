@@ -8,7 +8,9 @@ def index():
 
 @app.route("/main",methods=["GET","POST"])
 def main():
+    if flag == 1:
     r = request.form.get("q")
+    flag = 0
     return(render_template("main.html",r=r))
 
 @app.route("/prediction",methods=["GET","POST"])
