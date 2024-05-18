@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 flag = 1
+name =""
 
 app = Flask(__name__)
 
@@ -13,7 +14,7 @@ def main():
     if flag == 1:
     r = request.form.get("q")
     flag = 0
-    return(render_template("main.html",r=r))
+    return(render_template("main.html",r=name))
 
 @app.route("/prediction",methods=["GET","POST"])
 def prediction():
