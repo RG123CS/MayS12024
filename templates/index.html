@@ -13,3 +13,18 @@
     <p><input type="text" name="q"></p>
     <p><input type="submit" value="Enter"></p>
 </form>
+</style>
+.container {width:100%;margin:auto}
+@media (min-width:600px) {.container {width:80%)}
+@media (min-width:600px) {.container {width:60%)}
+@media (min-width:600px) {.container {width:50%)}
+</style>
+
+<h2>The predicted DBS share price is {{r}}</h2>
+<form action="main" method="post">
+    <p><input type="submit" value="Main"></p>
+</form>
+<form action="/end" method="post">
+    <p><input type="submit" value="End"></p>
+</form>
+</div>
