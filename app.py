@@ -10,9 +10,9 @@ def index():
 
 @app.route("/main",methods=["GET","POST"])
 def main():
-    global flag
+    global flag, name
     if flag == 1:
-    r = request.form.get("q")
+    name = request.form.get("q")
     flag = 0
     return(render_template("main.html",r=name))
 
@@ -28,7 +28,7 @@ def dbs_price():
 app.route("/end",methods=["GET","POST"])
 def end():
     global flag
-    flag == 1:
+    flag = 1
     return(render_template("index.html"))
 
 if __name__ == "__main__":
