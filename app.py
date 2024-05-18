@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+flag = 1
 
 app = Flask(__name__)
 
@@ -8,6 +9,7 @@ def index():
 
 @app.route("/main",methods=["GET","POST"])
 def main():
+    global flag
     if flag == 1:
     r = request.form.get("q")
     flag = 0
